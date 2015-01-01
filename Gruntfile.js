@@ -12,8 +12,12 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-            files: ["./less/*.less", "./views/*"],
-            tasks: ["less", "cssmin"],
+            files: [
+                "./less/*.less", 
+                "./views/*",
+                "./scripts/*.js"
+            ],
+            tasks: ["less", "cssmin", "concat"],
             options: {
               livereload: true,
             },
@@ -21,15 +25,27 @@ module.exports = function(grunt) {
         cssmin: {
           target: {
             files: {
-              './public/stylesheets/style.min.css': ['./public/stylesheets/style.css']
+              './public/stylesheets/style.min.css': [
+                './bower_components/bootstrap/dist/css/bootstrap.min.css',
+                './public/stylesheets/style.css'
+              ]
             }
           }
-        }
+        },
+        concat: {
+            dist: {
+              src: [
+                  './scripts/*'
+              ],
+              dest: './public/javascripts/scripts.js',
+            },
+        },
     });
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     grunt.registerTask('default', ['watch']);
 };

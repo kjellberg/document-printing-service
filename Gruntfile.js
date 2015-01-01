@@ -26,7 +26,7 @@ module.exports = function(grunt) {
           target: {
             files: {
               './public/stylesheets/style.min.css': [
-                './bower_components/bootstrap/dist/css/bootstrap.min.css',
+                './public/libs/bootstrap/dist/css/bootstrap.min.css',
                 './public/stylesheets/style.css'
               ]
             }

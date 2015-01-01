@@ -35,7 +35,7 @@ Dropzone.options.myDropzone = {
     // Send file starts
     self.on("sending", function(file) {
       console.log('upload started', file);
-      $('.meter').show();
+      // $('.meter').show();
     });
  
     // File upload Progress
@@ -45,7 +45,7 @@ Dropzone.options.myDropzone = {
     });
  
     self.on("queuecomplete", function(progress) {
-      $('.meter').delay(999).slideUp(999);
+      //$('.meter').delay(999).slideUp(999);
     });
  
     // On removing file

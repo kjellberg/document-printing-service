@@ -1,0 +1,22 @@
+{
+  "name": "document-printing-service",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "0.10.34",
+    "npm": "1.4.28"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjellberg/document-printing-service.git"
+  },
+  "author": "Rasmus Kjellberg <rk@youngmedia.se> (http://www.rasmuskjellberg.se/)",
+  "bugs": {
+    "url": "https://github.com/kjellberg/document-printing-service/issues"
+  },
+  "homepage": "https://github.com/kjellberg/document-printing-service"
+}

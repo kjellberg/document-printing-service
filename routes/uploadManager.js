@@ -43,10 +43,21 @@ module.exports = function(router) {
 
   });
  
-  router.delete('/uploads/files/:name', function(req, res) {
-    uploader.delete(req, res, function(obj) {
+  router.delete('/uploads/files/:sc/:name', function(req, res) {
+
+    // Create session
+    var sess = req.session
+
+    console.log(req);
+
+    // Enable filelisting
+    sess.hasFiles = true;
+
+    require('blueimp-file-upload-expressjs')(getOptions(sess.code))
+    .delete(req, res, function(obj) {
       res.send(JSON.stringify(obj));
     });
   });
+
   return router;
 };

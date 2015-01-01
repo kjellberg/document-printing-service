@@ -30,7 +30,10 @@ Dropzone.options.myDropzone = {
     //New file added
     self.on("addedfile", function(file) {
       console.log('new file added ', file);
-      $("#createOrder").fadeIn();
+      $("#createOrder").slideDown('slow').animate(
+        { opacity: 1 },
+        { queue: false, duration: 'slow' }
+      );
     });
  
     // Send file starts
@@ -53,7 +56,7 @@ Dropzone.options.myDropzone = {
     self.on("removedfile", function(file) {
       console.log(file);
       $.ajax({
-        url: '/uploads/files/' + file.name,
+        url: '/uploads/files/' + window.session_code + '/' + file.name,
         type: 'DELETE',
         success: function(result) {
           console.log(result);

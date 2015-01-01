@@ -85,6 +85,7 @@ body {
   padding: 40px 0px;
   color: #ffffff;
   display: none;
+  opacity: 0;
 }
 #createOrder h1 {
   margin: 0px;

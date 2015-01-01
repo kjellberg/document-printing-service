@@ -1,0 +1,100 @@
+@header-height: 80px;
+@header-bgcolor: #ffffff;
+@header-shadow: 1px 1px 1px rgba( 100, 100, 100, 0.2);
+
+@menu-font: 'Lato', sans-serif;
+@menu-color: #121212;
+
+@logo-font: 'Pacifico', cursive;
+
+@header-btn-hover-background: @primary-color;
+@header-btn-hover-color: #ffffff;
+
+body {
+	padding-top: @header-height;
+}
+
+#header {
+	height: @header-height;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	background: @header-bgcolor;
+	box-shadow: @header-shadow;
+	z-index: 10;
+
+
+	#logo-img {
+		float: left;
+		line-height: @header-height;
+		margin-right: @header-height / 3;
+
+		img {
+			outline: none;
+			height: @header-height / 1.5;
+			margin: 0px;
+			padding: 0px;
+		}
+	}
+
+	h2#logo {
+		line-height: @header-height;
+		margin: 0px;
+		padding: 0px;
+		font-family: @logo-font;
+		font-weight: 400;
+		font-size: @header-height / 2;
+		float: left;
+		color: @primary-color;
+	}
+
+	small#logo-slogan {
+		font-size: 16px;
+		font-weight: bold;
+		line-height: @header-height;
+		display: block;
+		float: left;
+		margin-left: @header-height / 3;
+		text-transform: uppercase;
+		font-family: @menu-font;
+	}
+}
+
+#menu_container {
+	float: right;
+	height: @header-height;
+
+	ul {
+		padding: 0px;
+		margin: 0px;
+		height: @header-height;
+		list-style: none;
+
+		li {
+			float: left;
+			line-height: @header-height;
+
+			a {
+				font-family: @menu-font;
+				display: block;
+				background: @header-bgcolor;
+				margin-left: @header-height / 4;
+				padding: 0px @header-height / 4;
+				letter-spacing: 1.5px;
+				text-decoration: none;	
+				font-size: 16px;
+				font-weight: bold;
+				color: @primary-color;
+
+				&:hover,
+				&:active {
+					text-decoration: none;
+					background: @header-btn-hover-background;
+					color: @header-btn-hover-color;
+				}
+			}
+		}
+	}
+}

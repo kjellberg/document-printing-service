@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/kjellberg/document-printing-service/issues"
   },
-  "homepage": "https://github.com/kjellberg/document-printing-service"
+  "homepage": "https://github.com/kjellberg/document-printing-service",
+  "dependencies": {
+    "dropzone": "^3.12.0",
+    "express": "^4.10.6",
+    "socket.io": "^1.2.1"
+  }
 }

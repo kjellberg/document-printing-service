@@ -15,6 +15,7 @@ module.exports = function(grunt) {
             files: [
                 "./less/*.less", 
                 "./views/*",
+                "./views/partials/*",
                 "./scripts/*.js"
             ],
             tasks: ["less", "cssmin", "concat"],

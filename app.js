@@ -5,19 +5,19 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var session = require('express-session');
 
 var app = express();
 
 
 // Enable sessions
-var session = require('express-session');
 
 app.use(session({
   secret: 'nsaaf@af-.gd7ikdn1jem1239ajsdn@1.23.-12318asjd',
   resave: false,
+  cookie: { maxAge: 60000 },
   saveUninitialized: true
 }))
 
@@ -66,6 +66,5 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
-
 
 module.exports = app;

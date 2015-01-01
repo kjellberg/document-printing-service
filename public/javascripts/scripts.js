@@ -30,6 +30,7 @@ Dropzone.options.myDropzone = {
     //New file added
     self.on("addedfile", function(file) {
       console.log('new file added ', file);
+      $("#createOrder").fadeIn();
     });
  
     // Send file starts

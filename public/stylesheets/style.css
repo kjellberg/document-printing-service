@@ -80,3 +80,63 @@ body {
   background: #cf142b;
   color: #ffffff;
 }
+#createOrder {
+  background: #cf142b;
+  padding: 40px 0px;
+  color: #ffffff;
+  display: none;
+}
+#createOrder h1 {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+#createOrder h2#sub-header {
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 300;
+}
+#createOrder .form-group {
+  margin-top: 26.66666667px;
+}
+#createOrder input[type="text"] {
+  border: none;
+  color: #e74c3c;
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  font-size: 14px;
+  padding: 0px 16px;
+  padding-left: 40px;
+  outline: none;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+#createOrder input[type="text"]#name {
+  background: #ffffff url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male-16.png') no-repeat;
+  background-position: 10px;
+}
+#createOrder input[type="text"]#phone {
+  background: #ffffff url('https://cdn4.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/phone_2.png') no-repeat;
+  background-position: 10px;
+}
+#createOrder input[type="text"]#email {
+  background: #ffffff url('https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/contact-16.png') no-repeat;
+  background-position: 10px;
+}
+#createOrder input[type="text"]::-webkit-input-placeholder {
+  color: #212121;
+}
+#createOrder input[type="text"]:-moz-placeholder {
+  color: #212121;
+}
+#createOrder input[type="text"]::-moz-placeholder {
+  color: #212121;
+}
+#createOrder input[type="text"]:-ms-input-placeholder {
+  color: #212121;
+}
+#createOrder .radio label {
+  margin-right: 15px;
+}

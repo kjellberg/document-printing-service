@@ -17,6 +17,41 @@
 
 </div>
 
-<div style="height: 600px;"></div>
+<div id="createOrder">
+	<form action="">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-5">
+					<h1>Create order</h1>
+
+					<h2 id="sub-header">
+						Please fill in the form to create your order.
+					</h2>
+
+					<div class="form-group">
+						<input id="name" placeholder="John Doe" type="text">
+					</div>
+					
+					<div class="form-group">
+						<input id="phone" placeholder="99123456" type="text">
+					</div>
+										
+					<div class="form-group">
+						<input id="email" placeholder="john.doe@gmail.com" type="text">
+					</div>
+					
+					<div class="form-group radio">
+						<label class="payby cash"><input name="paymentType" type="radio"> Pay by cash</label> 
+						<label class="payby card"><input name="paymentType" type="radio"> Pay by card</label>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-default">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
 
 <% include partials/footer %>

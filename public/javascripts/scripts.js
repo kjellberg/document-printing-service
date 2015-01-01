@@ -17,6 +17,8 @@ Dropzone.options.myDropzone = {
         };
  
         self.options.addedfile.call(self, mockFile);
+
+        // @todo: check if image or document.
         self.options.thumbnail.call(self, mockFile, files[i].url);
  
       };

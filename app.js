@@ -16,7 +16,7 @@ var app = express();
 
 app.use(session({
   secret: 'nsaaf@af-.gd7ikdn1jem1239ajsdn@1.23.-12318asjd',
-  resave: false,
+  resave: true,
   cookie: { maxAge: 60000 },
   saveUninitialized: true
 }))

@@ -20,16 +20,23 @@ Dropzone.options.myDropzone = {
 
         // @todo: check if image or document.
         self.options.thumbnail.call(self, mockFile, files[i].url);
- 
+
+        $("#filelist").append('<li data-file="' + files[i].name + '">' + files[i].name + ', </li>');
+        $("#createOrder").slideDown('slow').animate(
+                { opacity: 1 },
+                { queue: false, duration: 'slow' }
+              );
       };
  
     });
  
-    // bind events
- 
+    // on file upload success
+    self.on("success", function(file) {
+      $("#filelist").append('<li data-file="' + file.name + '">' + file.name + ', </li>');
+    });
+
     //New file added
     self.on("addedfile", function(file) {
-      console.log('new file added ', file);
       $("#createOrder").slideDown('slow').animate(
         { opacity: 1 },
         { queue: false, duration: 'slow' }
@@ -59,7 +66,7 @@ Dropzone.options.myDropzone = {
         url: '/uploads/files/' + window.session_code + '/' + file.name,
         type: 'DELETE',
         success: function(result) {
-          console.log(result);
+          $('li[data-file="' + file.name + '"]').remove();
         }
       });
     });

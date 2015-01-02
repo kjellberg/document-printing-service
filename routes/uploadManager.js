@@ -3,6 +3,13 @@ function getOptions(sesscode) {
       tmpDir: __dirname + '/../public/uploads/tmp',
       uploadDir: __dirname + '/../public/uploads/files/' + sesscode + '/',
       uploadUrl: '/uploads/files/' + sesscode + '/',
+      copyImgAsThumb : false,
+      maxPostSize: 25000000, // 11 GB
+      minFileSize: 1,
+      maxFileSize: 20000000, // 10 GB
+      acceptFileTypes: /\.(pdf|docx?|txt|odt|csv|xlsx?)/i,
+      inlineFileTypes: /\.(pdf|docx?|txt|odt|csv|xlsx?)/i,
+
       storage: {
         type: 'local'
       }
@@ -10,6 +17,7 @@ function getOptions(sesscode) {
 }
 
 module.exports = function(router) {
+  
   router.get('/upload', function(req, res) {
     // Create session
     var sess = req.session
@@ -49,9 +57,6 @@ module.exports = function(router) {
     var sess = req.session
 
     console.log(req);
-
-    // Enable filelisting
-    sess.hasFiles = true;
 
     require('blueimp-file-upload-expressjs')(getOptions(sess.code))
     .delete(req, res, function(obj) {

@@ -1,12 +1,21 @@
 <% include partials/head %>
 <a name="upload"></a>
 
+<div id="simpleUpload">
+
+	<div id="dropzone">
+	  <form action="/upload" class="dropzone" id="my-dropzone">
+	  </form>
+	</div>
+
+</div>
+
 <div id="createOrder">
 	<form action="">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-5">
-					<h1>Create order</h1>
+					<h1>Personal information</h1>
 
 					<h2 id="sub-header">
 						Please fill in the form to create your order.
@@ -33,25 +42,13 @@
 						<button type="submit" class="btn btn-default">Submit</button>
 					</div>
 				</div>
+				<div class="col-sm-5 col-sm-offset-2">
+					<h1>Order information</h1>
+					<ul id="filelist"></ul>
+				</div>
 			</div>
 		</div>
 	</form>
-</div>
-
-<div id="simpleUpload">
-
-	<!-- http://css-tricks.com/css3-progress-bars/ -->
-	<div class="meter">
-	  <span class="roller"></span>
-	</div>
-
-	<div id="dropzone">
-	  <form action="/upload" class="dropzone" id="my-dropzone">
-	  </form>
-	</div>
-
-	<!-- Also checkout BS example : http://www.dropzonejs.com/bootstrap.html -->
-
 </div>
 
 
